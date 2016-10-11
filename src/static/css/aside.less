@@ -1,0 +1,29 @@
+.aside-container {
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    background: @gray-base;
+    overflow-y: auto;
+
+    > ul {
+      position: absolute;
+      width: 100%;
+    }
+
+    >ul li a{
+      line-height: 2.5rem;
+      font-size: 16px;
+      text-decoration: none;
+      padding-left: 1rem;
+      color: @text-color;
+      display: block;
+
+      &.active{
+        color: #fff;
+        background: @gray-light;
+        border-right: 5px solid @green-base;
+      }
+    }
+}

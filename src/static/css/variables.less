@@ -1,0 +1,45 @@
+//
+// Colors
+// --------------------------------------------------
+
+@gray-base:               #3f3f3f;
+@gray-dark:               darken(@gray-base,10%);
+@gray-light:              lighten(@gray-base,10%);
+
+@green-base:              #009b72;
+@green-dark:              darken(@green-base,10%);
+@green-light:             lighten(@green-base,10%);
+
+@brand-info:              #5bc0de;
+@brand-warning:           #f0ad4e;
+@brand-danger:            #d9534f;
+
+@body-bg:                 #f4f4f4;
+@text-color:              #666666;
+
+//
+// Base
+// --------------------------------------------------
+
+//== Link
+
+@link-color:              @green-base;
+@link-hover-color:        darken(@link-color, 5%);
+@link-hover-decoration:   underline;
+
+a {
+  color: @link-color;
+
+  &:hover{
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+}
+//== Font
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
