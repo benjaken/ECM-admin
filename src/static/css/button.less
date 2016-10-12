@@ -1,0 +1,39 @@
+button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover{
+    background: darken(#fff, 5%);
+  }
+
+  &.primary{
+    color: #fff;
+    background-color: #009B72;
+    border-color: #00825f;
+
+    &:hover{
+      background: darken(#009B72, 5%);
+    }
+  }
+
+  &[disabled]{
+    color: #ccc;
+
+    &:hover{
+      background: #fff;
+    }
+
+    &.primary:hover{
+      background-color: #009B72;
+    }
+  }
+}

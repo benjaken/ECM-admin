@@ -1,0 +1,23 @@
+.table{
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  margin-bottom: .5rem;
+
+  &-striped{
+    background-color: #f9f9f9;
+
+    >tbody>tr:nth-of-type(odd){
+      background: #fff;
+    }
+
+    >tbody>tr>td {
+      color: #999
+    }
+  }
+
+  tr th, tr td {
+    padding: .5rem;
+    line-height: 1rem;
+  }
+}

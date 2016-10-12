@@ -30,12 +30,14 @@ export default {
     timePagination: [{'name': '日'}, {'name': '周'}, {'name': '月'}],
     numberPagination: [{'name': '30'}, {'name': '50'}, {'name': '100'}, {'name': '所有'}],
     datas: Array,
-    legend: []
+    legends: []
   }),
   data () {
     return {
       currentpage: this.timePagination.length > 0 ? this.timePagination[0].name : '',
-      xAxis: []
+      xAxis: [],
+      yAxis: [],
+      yAxis1: []
     }
   },
   methods: {
@@ -46,7 +48,11 @@ export default {
   mounted () {
     for (var obj of this.datas) {
       this.xAxis.push(obj.xAxis)
+      this.yAxis1.push(obj.yAxis)
+      this.yAxis.push(obj.yAxis[0].title)
     }
+    console.log(this.yAxis1)
+    console.log(this.yAxis)
     var Echart = echarts.init(document.getElementById('Echart'))
     Echart.hideLoading()
     Echart.setOption({
@@ -54,7 +60,7 @@ export default {
         trigger: 'axis'
       },
       legend: {
-        data: this.legend
+        data: this.legends
       },
       toolbox: {
         feature: {
