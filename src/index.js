@@ -15,6 +15,9 @@ const router = new VueRouter({
     children: [{
       path: '111',
       component: require('./modules/pages/111.vue')
+    }, {
+      path: '222',
+      component: require('./modules/pages/222.vue')
     }]
   }, {
     path: '/',

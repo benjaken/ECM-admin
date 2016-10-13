@@ -2,7 +2,7 @@
   <div class="aside-container">
     <ul>
       <li v-for="config in configs">
-        <a :id="config.id" :class="{'active': currentPage === '/main/' + config.id}">{{config.title}}</a>
+        <router-link :to="'/main/' + config.id" tag="a" :class="{'active': currentPage === '/main/' + config.id}">{{config.title}}</router-link>
       </li>
     </ul>
   </div>

@@ -17,9 +17,8 @@
       <table class="table table-striped">
         <thead><tr><th v-for="th in tableThContent">{{th}}</th></tr></thead>
         <tbody>
-          <tr v-for="n in evenNumbers">
-            <td>{{n.date}}</td>
-            <td v-for="i in 3">{{n.number}}</td>
+          <tr v-for="even in evenNumbers">
+            <td v-for="n in even">{{n}}</td>
             <td><a href="#">查看</a></td>
           </tr>
         </tbody>
@@ -28,7 +27,7 @@
         <li><button @click="nowpage -= 1" :disabled="nowpage === 1">上一页</button></li>
         <li>{{nowpage}}/{{pages}}</li>
         <li><button @click="nowpage += 1" :disabled="nowpage === pages">下一页</button></li>
-      <ul>
+      </ul>
     </div>
   </div>
 </template>
