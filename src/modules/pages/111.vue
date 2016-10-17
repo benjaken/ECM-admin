@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-datepicker></v-datepicker>
+    <v-datepicker format="yyyy-mm-dd"
+                  defaultvalue="2016-08-01"
+                  :group="true"
+                  :onSearch='_onSearch'>
+    </v-datepicker>
     <v-panel title="版本分布" :pagination="Pagination">
       <div slot="ios"><div id="ioschart" style="height:400px;"></div></div>
       <div slot="android">222</div>
@@ -104,6 +108,11 @@ export default{
         }
       ]
     })
+  },
+  methods: {
+    _onSearch () {
+      console.log('click')
+    }
   }
 }
 </script>

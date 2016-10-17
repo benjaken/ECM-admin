@@ -24,6 +24,6 @@
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    padding: 0 1rem;
+    padding: 1rem;
   }
 </style>
